@@ -1,8 +1,11 @@
 # ai-smartwatch-disease-detection
 
 import tensorflow as tf
+
 from tensorflow.keras.models import Sequential
+
 from tensorflow.keras.layers import Dense, LSTM
+
 import numpy as np
 
 def create_model(input_shape):
@@ -15,9 +18,11 @@ def create_model(input_shape):
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
     return model
 
+
 def train_model(model, X_train, y_train):
     model.fit(X_train, y_train, epochs=10, batch_size=32)
     return model
+
 
 def predict_health_condition(model, X_test):
     return model.predict(X_test)
