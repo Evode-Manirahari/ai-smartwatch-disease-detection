@@ -1,7 +1,8 @@
 # ai-smartwatch-disease-detection
 
 import time
-from data_collection import collect_heart_rate, collect_accelerometer_data
+from data_collection 
+import collect_heart_rate, collect_accelerometer_data
 from data_processing import process_heart_rate_data, process_accelerometer_data
 from model import create_model, predict_health_condition
 import numpy as np
