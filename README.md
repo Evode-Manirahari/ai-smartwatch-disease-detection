@@ -1,4 +1,5 @@
 # ai-smartwatch-disease-detection
+
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, LSTM
@@ -6,6 +7,7 @@ import numpy as np
 
 def create_model(input_shape):
     model = Sequential([
+        
         LSTM(64, input_shape=input_shape, return_sequences=True),
         LSTM(64),
         Dense(1, activation='sigmoid')
